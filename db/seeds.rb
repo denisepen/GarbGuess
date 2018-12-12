@@ -5,3 +5,35 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+3.times do |clothes|
+  Clothing.create!(
+    weather_category: "mild",
+    name: "jeans",
+    body_cat: "bottom",
+    color: 'blue',
+    event: "casual"
+
+  )
+end
+
+  2.times do |clothes|
+    Clothing.create!(
+      weather_category: "rain",
+      name: "boots",
+      body_cat: "feet",
+      color: 'black',
+      event: "casual"
+
+    )
+  end
+
+    5.times do |clothes|
+      Clothing.create!(
+        weather_category: "mild",
+        name: "dress",
+        body_cat: "top",
+
+        event: "casual"
+
+      )
+    end

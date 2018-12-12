@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  weather_category: MyString
+  body_cat: MyString
+  color: MyString
+  event: MyString
+
+two:
+  weather_category: MyString
+  body_cat: MyString
+  color: MyString
+  event: MyString
