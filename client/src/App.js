@@ -1,17 +1,35 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 // import './App.css';
+import Searchfield from './Searchfield';
+import Card from './Card'
 
 class App extends Component {
 
-  componentWillmount(){
-    return weather =  fetch('api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=725e07c224d8f9013d5380b8c4954377')
-      .then(response => response.json())
-      .then(weather => weather)
-  }
+
+
+  constructor(props) {
+      super(props);
+
+      this.state = {
+        data: [],
+      };
+    }
+
+    componentDidMount() {
+      fetch('/clothings')
+        .then(response => response.json())
+        .then(clothes => this.setState({ data: clothes }));
+    }
+
 
   render() {
-    return (<h1>Hello </h1>)
+    return (
+      <div>
+        <h1>Hello </h1>
+        <Card item={this.state.data}/>
+      </div>  
+    )
   }
 }
 

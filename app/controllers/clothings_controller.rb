@@ -3,6 +3,7 @@ class ClothingsController < ApplicationController
 
   # GET /clothings
   def index
+    # @clothings = Clothing.where(color: "blue")
     @clothings = Clothing.all
 
     render json: @clothings
