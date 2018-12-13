@@ -7,13 +7,13 @@ const CardList = (props) => {
      return item.weather_category === props.weather.toLowerCase();
    })
 
-   let allClothingList = props.items.map(item => {
-     console.log(props.items)
-     return <Card name={item.name} body_part={item.body_cat} color={item.color} />
+   let allClothingList = props.items.map((item, i) => {
+     // console.log(props.items)
+     return <Card name={item.name} body_part={item.body_cat} color={item.color} key={i} />
    })
 
-   let showList = clothingList.map(item => {
-    return  <Card name={item.name} body_part={item.body_cat} color={item.color} weather={item.weather_category} />
+   let showList = clothingList.map((item, i) => {
+    return  <Card name={item.name} body_part={item.body_cat} color={item.color} weather={item.weather_category} key={i}/>
    })
 
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
-// import './App.css';
+import './App.css';
 import Searchfield from './Searchfield';
 // import Card from './Card'
 import CardList from './CardList';
@@ -26,7 +26,7 @@ class App extends Component {
 
     handleInput = (e) => {
     let input = e.target.value
-    console.log(input)
+    // console.log(input)
       this.setState({ weather: input})
     }
 
@@ -34,8 +34,10 @@ class App extends Component {
 
       return (
         <div>
+        <div className="top">
           <h1>Please Choose A Type of Weather </h1>
           <Searchfield searchChange={this.handleInput}/>
+        </div>
 
           <CardList items={this.state.data} weather={this.state.weather}/>
         </div>
