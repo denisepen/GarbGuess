@@ -13,17 +13,21 @@ const CardList = (props) => {
    })
 
    let showList = clothingList.map(item => {
-    return  <Card name={item.name} body_part={item.body_cat} color={item.color} />
+    return  <Card name={item.name} body_part={item.body_cat} color={item.color} weather={item.weather_category} />
    })
 
 
    if (!props.weather){
      return (
-       {allClothingList}
+       <div>
+        {allClothingList}
+        </div>
      )
    } else {
      return (
-       {showList}
+       <div>
+        {showList}
+      </div>
      )
    }
 

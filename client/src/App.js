@@ -25,7 +25,8 @@ class App extends Component {
     }
 
     handleInput = (e) => {
-    let input = this.target.value
+    let input = e.target.value
+    console.log(input)
       this.setState({ weather: input})
     }
 
@@ -34,7 +35,7 @@ class App extends Component {
       return (
         <div>
           <h1>Please Choose A Type of Weather </h1>
-          <Searchfield onChange={this.handleInput}/>
+          <Searchfield searchChange={this.handleInput}/>
 
           <CardList items={this.state.data} weather={this.state.weather}/>
         </div>
