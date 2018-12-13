@@ -13,7 +13,7 @@ const CardList = (props) => {
    })
 
    let showList = clothingList.map((item, i) => {
-    return  <Card name={item.name} body_part={item.body_cat} color={item.color} weather={item.weather_category} key={i}/>
+    return  <Card name={item.name} body_part={item.body_cat} color={item.color} weather={item.weather_category}  image={item.image} key={i}/>
    })
 
 
