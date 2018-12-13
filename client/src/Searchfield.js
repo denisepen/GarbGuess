@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Searchfield = () => {
+const Searchfield = (props) => {
 
   return (
-    <input type="search" placeholder="Season"/> 
+    <input type="search" placeholder="rain, sun, mild"/> 
   )
 }
 

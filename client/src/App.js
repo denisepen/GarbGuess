@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 // import './App.css';
 import Searchfield from './Searchfield';
-import Card from './Card'
+// import Card from './Card'
+import CardList from './CardList';
 
 class App extends Component {
 
@@ -13,6 +14,7 @@ class App extends Component {
 
       this.state = {
         data: [],
+        weather: ''
       };
     }
 
@@ -22,14 +24,23 @@ class App extends Component {
         .then(clothes => this.setState({ data: clothes }));
     }
 
+    handleInput = (e) => {
+    let input = this.target.value
+      this.setState({ weather: input})
+    }
 
   render() {
-    return (
-      <div>
-        <h1>Hello </h1>
-        <Card item={this.state.data}/>
-      </div>  
-    )
+
+      return (
+        <div>
+          <h1>Please Choose A Type of Weather </h1>
+          <Searchfield onChange={this.handleInput}/>
+
+          <CardList items={this.state.data} weather={this.state.weather}/>
+        </div>
+      )
+
+
   }
 }
 
