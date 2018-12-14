@@ -22,6 +22,10 @@ class App extends Component {
       fetch('/clothings')
         .then(response => response.json())
         .then(clothes => this.setState({ data: clothes }));
+
+        fetch('http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=725e07c224d8f9013d5380b8c4954377')
+        .then(response => response.json())
+        .then(weather => console.log(weather))
     }
 
     handleInput = (e) => {
