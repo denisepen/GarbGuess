@@ -1,0 +1,16 @@
+-Figure out how to include multiple weather conditions for each item of clothing.
+
+-Determine which weather condition to use to determine the acceptable item of clothing.
+  -look at weather API
+  -nested attributes for weather? upper_temp, lower_temp, precipitation, cloud,
+  clothing(nested attributes for clothes weather_category )
+
+-Determine how to display weather  - temp, condition (cloud, sun, temp), precipitation
+ -How many times do I want to hit the API?
+ -Or only make fetch call when application starts?
+
+
+Not as Important:
+ -Work on clothing card display
+ -Do we have a form to query all conditions at once?
+  -ex: check box for rain/snow, temp input field, check box for event type (casual, work, formal)

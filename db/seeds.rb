@@ -11,7 +11,8 @@
     name: "jeans",
     body_cat: "bottom",
     color: 'blue',
-    event: "casual"
+    event: "casual",
+    image: "https://lsco.scene7.com/is/image/lsco/Levis/clothing/196260000-front-pdp.jpg?$grid_desktop_bottoms$"
 
   )
 end
@@ -22,7 +23,8 @@ end
       name: "boots",
       body_cat: "feet",
       color: 'black',
-      event: "casual"
+      event: "casual",
+      image: "https://media03.toms.com/static/www/images/Womens-Shoes/2018/FH18/10012467-BlackLeatherWomensEsme-P-1450x1015.jpg"
 
     )
   end
@@ -32,8 +34,10 @@ end
         weather_category: "mild",
         name: "dress",
         body_cat: "top",
+        color: "yellow",
+        event: "casual",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrKkGSNGGOGRsGXJWiiBISNASPx3NJt24S9IiVF-7GBzy791Bafg"
 
-        event: "casual"
 
       )
     end
