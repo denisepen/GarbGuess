@@ -27,9 +27,7 @@ class App extends Component {
     }
 
     handleInput = (e) => {
-
       this.setState({weather: e.target.value})
-
     }
 
    //  handleInput = (e) => {
