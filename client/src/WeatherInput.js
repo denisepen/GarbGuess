@@ -5,7 +5,7 @@ const WeatherInput = (props)  => {
   return (
     <div>
 
-         <input type="search" placeholder="Enter Zip Code"  onKeyPress={props.handleChange} />
+         <input type="text" placeholder="Enter Zip Code"  onKeyPress={props.handleChange} />
 
     </div>
   )

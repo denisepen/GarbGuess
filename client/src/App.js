@@ -4,6 +4,7 @@ import './App.css';
 import Searchfield from './Searchfield';
 // import Card from './Card'
 import WeatherInput from './WeatherInput';
+import WeatherDisplay from './WeatherDisplay'
 import CardList from './CardList';
 
 class App extends Component {
@@ -15,8 +16,9 @@ class App extends Component {
 
       this.state = {
         data: [],
-        weather: '',
-        zipCode: null,
+        // city: '' ,
+        zipCode: '',
+        weather: []
       };
     }
 
@@ -24,27 +26,32 @@ class App extends Component {
       fetch('/clothings')
         .then(response => response.json())
         .then(clothes => this.setState({ data: clothes }));
+        // .then(clothes => console.log(clothes));
     }
+
+
 
     handleInput = (e) => {
-      this.setState({weather: e.target.value})
+      if (e.which === 13) {
+          // e.preventDefault();
+    let input = e.target.value;
+
+      this.setState({ zipCode: input })
+      console.log("state zip ", this.state.zipCode);
+
+
+
+      // e.preventDefault();
+   fetch(`https://api.openweathermap.org/data/2.5/forecast?zip=${this.state.zipCode}&&APPID=725e07c224d8f9013d5380b8c4954377`)
+        .then(response => response.json())
+        // .then(weather =>  console.log(weather))
+        .then(weather =>  this.setState({weather: weather}))
+        // .then(weather => weatherObj = {...weather})
+        console.log("this.state.weather: ", this.state)
     }
 
-   //  handleInput = (e) => {
-   //    if (e.key === 'Enter') {
-   //        // e.preventDefault();
-   //  let input = e.target.value;
-   //
-   //  console.log("input zip", input)
-   //    this.setState({ zipCode: input })
-   //    console.log("state zip", this.state);
-   //    // e.preventDefault();
-   // fetch(`https://api.openweathermap.org/data/2.5/forecast?zip=${this.state.zip}&&APPID=725e07c224d8f9013d5380b8c4954377`)
-   //      .then(response => response.json())
-   //      .then(weather => this.setState(weather: weather))
-   //      // console.log(weather)
-   //  }
-  // }
+    // console.log("This.state.city: ", this.state);
+  }
 
 
 
@@ -54,8 +61,12 @@ class App extends Component {
       return (
         <div>
         <div className="top">
-          <h1>Please Enter The Weather COndition </h1>
-          <Searchfield searchChange={this.handleInput}/>
+          <h1>Please Enter Your Zip Code </h1>
+          <WeatherInput handleChange={this.handleInput} />
+          <WeatherDisplay weather={this.state.weather} />
+
+
+
 
         </div>
 
@@ -68,6 +79,17 @@ class App extends Component {
 }
 
 export default App;
+
+// <WeatherDisplay cityName={this.state.weather.city}
+
+// temp={this.state.weather.main.temp }
+// rain={this.state.weather.list.weather[0].description}/>
+
+// handleInput = (e) => {
+//   this.setState({weather: e.target.value})
+// }
+
+// <Searchfield searchChange={this.handleInput}/>
 
   // <WeatherInput handleChange={this.handleInput} />
 

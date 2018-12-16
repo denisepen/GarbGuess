@@ -4,7 +4,7 @@ import Card from './Card'
 const CardList = (props) => {
 
    let clothingList = props.items.filter(item =>  {
-     return item.weather_category === props.weather.toLowerCase();
+     return item.weather_category === props.weather;
    })
 
    let allClothingList = props.items.map((item, i) => {
