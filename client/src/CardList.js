@@ -11,10 +11,10 @@ const CardList = (props) => {
        let temp = (((props.weather.list[0].main.temp) -273.15)* (9/5) + 32).toFixed(1)
 
        let inRange = function(temp, item){
-         return ((temp <= item.weather_max) && temp >= item.weather_min)
+         return ((temp >= item.weather_min) && (temp <= item.weather_max))
        }
 
-       return (weatherDescription.includes(item.weather_category) && (inRange(temp, item)) )
+       return (weatherDescription.includes(item.weather_category) || (inRange(temp, item)) )
 
      }
      // return item.weather_category === props.weather;

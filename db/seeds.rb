@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-3.times do |clothes|
+2.times do |clothes|
   Clothing.create!(
     weather_category: "cloud",
     weather_min: 0,
@@ -33,7 +33,7 @@ end
     )
   end
 
-    5.times do |clothes|
+    2.times do |clothes|
       Clothing.create!(
         weather_category: "clear sky",
         weather_min: 65,
@@ -43,6 +43,21 @@ end
         color: "yellow",
         event: "casual",
         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrKkGSNGGOGRsGXJWiiBISNASPx3NJt24S9IiVF-7GBzy791Bafg"
+
+
+      )
+    end
+
+    2.times do |clothes|
+      Clothing.create!(
+        weather_category: "rain",
+        weather_min: 0,
+        weather_max: 55,
+        name: "Coat",
+        body_cat: "top",
+        color: "blue",
+        event: "work",
+        image: "https://www.gap.com/webcontent/0016/441/417/cn16441417.jpg"
 
 
       )
