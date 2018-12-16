@@ -14,7 +14,7 @@ const CardList = (props) => {
          return ((temp >= item.weather_min) && (temp <= item.weather_max))
        }
 
-       return (weatherDescription.includes(item.weather_category) || (inRange(temp, item)) )
+       return ((inRange(temp, item)) ||  weatherDescription.includes(item.weather_category) )
 
      }
      // return item.weather_category === props.weather;

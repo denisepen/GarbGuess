@@ -6,8 +6,7 @@ width: 50%
 div.card {
   border: 3px solid black;
   text-align: center;
-  width: 75%;
-  margin: auto;
-  margin: 10px;
+  width: 65%;
+  margin:  10px auto;
   background-color: lightblue
 }
