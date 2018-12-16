@@ -6,6 +6,7 @@ import Searchfield from './Searchfield';
 import WeatherInput from './WeatherInput';
 import WeatherDisplay from './WeatherDisplay'
 import CardList from './CardList';
+import Scroll from './Scroll'
 
 class App extends Component {
 
@@ -69,8 +70,9 @@ class App extends Component {
 
 
         </div>
-
-          <CardList items={this.state.data} weather={this.state.weather}/>
+          <Scroll>
+            <CardList items={this.state.data} weather={this.state.weather}/>
+          </Scroll>
         </div>
       )
 

@@ -23,7 +23,7 @@ const CardList = (props) => {
 
    let allClothingList = props.items.map((item, i) => {
      // console.log(props.items)
-     return <Card name={item.name} body_part={item.body_cat} color={item.color} key={i} />
+     return <Card name={item.name} body_part={item.body_cat} color={item.color} weather={item.weather_category}  image={item.image} key={i} />
    })
 
    let showList = clothingList.map((item, i) => {
