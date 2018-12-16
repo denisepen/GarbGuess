@@ -8,9 +8,11 @@
 3.times do |clothes|
   Clothing.create!(
     weather_category: "cloud",
+    weather_min: 0,
+    weather_max: 85,
     name: "jeans",
     body_cat: "bottom",
-    color: 'blue',
+    color: 'black',
     event: "casual",
     image: "https://lsco.scene7.com/is/image/lsco/Levis/clothing/196260000-front-pdp.jpg?$grid_desktop_bottoms$"
 
@@ -20,6 +22,8 @@ end
   2.times do |clothes|
     Clothing.create!(
       weather_category: "rain",
+      weather_min: 20,
+      weather_max: 75,
       name: "boots",
       body_cat: "feet",
       color: 'black',
@@ -32,6 +36,8 @@ end
     5.times do |clothes|
       Clothing.create!(
         weather_category: "clear sky",
+        weather_min: 65,
+        weather_max: 100,
         name: "dress",
         body_cat: "top",
         color: "yellow",

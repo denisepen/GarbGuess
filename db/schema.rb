@@ -14,6 +14,8 @@ ActiveRecord::Schema.define(version: 2018_12_12_190516) do
 
   create_table "clothings", force: :cascade do |t|
     t.string "weather_category"
+    t.integer "weather_min"
+    t.integer "weather_max"
     t.string "body_cat"
     t.string "color"
     t.string "event"
