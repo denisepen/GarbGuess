@@ -4,7 +4,14 @@ import Card from './Card'
 const CardList = (props) => {
 
    let clothingList = props.items.filter(item =>  {
-     return item.weather_category === props.weather;
+
+     if(props.weather.list){
+       let weatherDescription = props.weather.list[0].weather[0].description;
+
+       return weatherDescription.includes(item.weather_category)
+
+     }
+     // return item.weather_category === props.weather;
    })
 
    let allClothingList = props.items.map((item, i) => {

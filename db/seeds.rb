@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 3.times do |clothes|
   Clothing.create!(
-    weather_category: "mild",
+    weather_category: "cloud",
     name: "jeans",
     body_cat: "bottom",
     color: 'blue',
@@ -31,7 +31,7 @@ end
 
     5.times do |clothes|
       Clothing.create!(
-        weather_category: "mild",
+        weather_category: "clear sky",
         name: "dress",
         body_cat: "top",
         color: "yellow",
