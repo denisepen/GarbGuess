@@ -5,11 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-2.times do |clothes|
+1.times do |clothes|
   Clothing.create!(
     weather_category: "cloud",
     weather_min: 0,
-    weather_max: 85,
+    weather_max: 25,
     name: "jeans",
     body_cat: "bottom",
     color: 'black',
@@ -19,11 +19,11 @@
   )
 end
 
-  2.times do |clothes|
+  1.times do |clothes|
     Clothing.create!(
       weather_category: "rain",
       weather_min: 20,
-      weather_max: 75,
+      weather_max: 25,
       name: "boots",
       body_cat: "feet",
       color: 'black',
@@ -33,7 +33,7 @@ end
     )
   end
 
-    2.times do |clothes|
+    1.times do |clothes|
       Clothing.create!(
         weather_category: "clear sky",
         weather_min: 65,
@@ -48,16 +48,29 @@ end
       )
     end
 
-    2.times do |clothes|
+    1.times do |clothes|
       Clothing.create!(
         weather_category: "rain",
         weather_min: 0,
-        weather_max: 55,
+        weather_max: 25,
         name: "Coat",
         body_cat: "top",
         color: "blue",
         event: "work",
         image: "https://www.gap.com/webcontent/0013/634/191/cn13634191.jpg"
+      )
+    end
+
+    1.times do |clothes|
+      Clothing.create!(
+        weather_category: "snow",
+        weather_min: 0,
+        weather_max: 25,
+        name: "Coat",
+        body_cat: "top",
+        color: "blue",
+        event: "work",
+        image: 'https://images.unsplash.com/photo-1484021377774-82f0a0673843?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
 
 
       )

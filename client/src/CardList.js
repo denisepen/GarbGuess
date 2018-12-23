@@ -5,10 +5,10 @@ const CardList = (props) => {
 
    let clothingList = props.items.filter(item =>  {
 
-     if(props.weather.list){
-       let weatherDescription = props.weather.list[0].weather[0].description;
+     if(props.weather.location){
+       let weatherDescription = props.weather.description;
 
-       let temp = (((props.weather.list[0].main.temp) -273.15)* (9/5) + 32).toFixed(1)
+       let temp = (((props.weather.temp) -273.15)* (9/5) + 32).toFixed(1)
 
        let inRange = function(temp, item){
          return ((temp >= item.weather_min) && (temp <= item.weather_max))
@@ -31,7 +31,7 @@ const CardList = (props) => {
    })
 
 
-   if (!props.weather){
+   if (!props.weather.location){
      return (
        <div>
         {allClothingList}

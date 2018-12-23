@@ -4,9 +4,13 @@ import React from 'react';
 const WeatherInput = (props)  => {
   return (
     <div>
+      <form onSubmit={props.submit}>
+       <input
+         type="text"
+         placeholder="Enter Zip Code"
 
-         <input type="text" placeholder="Enter Zip Code"  onKeyPress={props.handleChange} />
-
+          onChange={props.handleChange}/>
+      </form>
     </div>
   )
 }
@@ -14,6 +18,7 @@ const WeatherInput = (props)  => {
 
 
 export default WeatherInput;
+// onKeyPress={props.handleChange}
 
 // onSubmit={props.weatherChange}
 // <form onSubmit={props.handleSubmit}>

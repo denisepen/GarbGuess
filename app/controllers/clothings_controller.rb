@@ -47,6 +47,6 @@ class ClothingsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def clothing_params
-      params.require(:clothing).permit(:weather_category, :body_cat, :color, :event)
+      params.require(:clothing).permit(:weather_category, :weather_min, :weather_max, :body_cat, :color, :event)
     end
 end
